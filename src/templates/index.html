@@ -1,0 +1,48 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+
+    
+
+    <script src="{% static 'vendors/mermaid/node_modules/mermaid/dist/mermaid.esm.mjs' %}"></script>
+    <script src="https://unpkg.com/mermaid@8.5.2/dist/mermaid.min.js"></script>
+{% endblock head %}
+{% block contenido %}
+
+
+    <!--
+    <div class="mermaid">
+        pie title Chart
+            "Part 1" : 55
+            "Part 2" : 45
+    </div>-->
+
+    <div class="mermaid">
+        classDiagram
+            class Person
+            Person : +String FirstName
+            Person : +String LastName
+            Person : +GetFullName()
+
+            class Employee
+            Person <|-- Employee : herencia
+            Employee : +Int:32 EmployeeCode
+            Employee : +GetEmployeeCode()
+    </div>
+
+    <pre class="mermaid">
+        graph TD 
+        A[Client] --> B[Load Balancer] 
+        B --> C[Server01] 
+        B --> D[Server02] 
+    </pre>
+
+    <script type="module">
+        import mermaid from "{% static 'vendors/mermaid/node_modules/mermaid/dist/mermaid.esm.mjs' %}";
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    
+{% endblock contenido %}
