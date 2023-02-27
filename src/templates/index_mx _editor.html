@@ -7,7 +7,7 @@
  	<link rel="stylesheet" href="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/css/common.css' %}" type="text/css" media="screen" />
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<style type="text/css" media="screen">
-		#page { background: url("images/draw/drawbg.jpg") repeat-y top; border: none; }
+		#page { background: url("{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/images/draw/drawbg.jpg' %}") repeat-y top; border: none; }
 	</style>
 	<script type="text/javascript">
 		var mxBasePath = "{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src' %}";
@@ -35,7 +35,7 @@
 	<script type="text/javascript" src="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/js/mxClient.js' %}"></script>
     <link rel="stylesheet" href="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/css/common.css' %}" charset="UTF-8" type="text/css">
 
-	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/js/app.js' %}"></script>
 	<script type="text/javascript">
 		// Program starts here. The document.onLoad executes the
 		// createEditor function with a given configuration.
@@ -61,7 +61,7 @@
 			
 			// Defines an icon for creating new connections in the connection handler.
 			// This will automatically disable the highlighting of the source vertex.
-			mxConnectionHandler.prototype.connectImage = new mxImage('images/connector.gif', 16, 16);
+			mxConnectionHandler.prototype.connectImage = new mxImage("{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/images/connector.gif %}", 16, 16);
 			
 			// Enables connections in the graph and disables
 			// reset of zoom and translate on root change
@@ -320,7 +320,7 @@
 		</div>
 		<div id="selectActions" style="width:100%;padding-left:54px;padding-bottom:4px;">
 		</div>
-		<table border="0" width="730px">
+		<table width="730px">
 			<tr>
 				<td id="toolbar" style="width:16px;padding-left:20px;" valign="top">
 					<!-- Toolbar Here -->				
@@ -328,9 +328,9 @@
 				<td valign="top" style="border-width:1px;border-style:solid;border-color:black;">
 					<div id="graph" tabindex="-1" style="position:relative;height:480px;width:684px;overflow:hidden;cursor:default;">
 						<!-- Graph Here -->
-						<center id="splash" style="padding-top:230px;">
-							<img src="images/loading.gif">
-						</center>
+						<div id="splash" style="padding-top:230px;">
+							<img src="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/images/loading.gif' %}">
+						</div>
 					</div>
 					<textarea id="xml" style="height:480px;width:684px;display:none;border-style:none;"></textarea>
 				</td>
