@@ -1,3 +1,4 @@
+{% load static %}
 <mxEditor defaultGroup="group" defaultEdge="connector">
 	<include name="config/editor-commons.xml"/>
 	<add as="onInit"><![CDATA[
@@ -317,7 +318,7 @@
 		<br/><br/>
 		<add as="Text" template="text" icon="images/text.gif"/>
 		<add as="Container" template="container" icon="images/swimlane.gif"/>
-		<add as="Rectangle" template="rectangle" icon="images/rectangle.gif"/>
+		<add as="Rectangle" template="rectangle" icon="{% static 'vendors/mxgraph/node_modules/mxgraph/javascript/src/images/rectangle.gif' %}"/>
 		<add as="Rounded" template="rounded" icon="images/rounded.gif"/>
 		<add as="Ellipse" template="shape" style="ellipse" icon="images/ellipse.gif"/>
 		<add as="Double Ellipse" template="shape" style="doubleEllipse" icon="images/doubleellipse.gif"/>

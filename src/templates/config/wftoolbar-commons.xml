@@ -37,7 +37,7 @@
 	<add as="ungroup" action="ungroup" icon="images/ungroup.gif"/>
 	<br/><hr/>
 	<add as="Swimlane" template="swimlane" icon="images/swimlane.gif"/>
-	<add as="Task" template="task" icon="images/rectangle.gif"/>
+	<add as="Task" template="task" icon="images/rectangletoolbar.gif"/>
 	<add as="Subprocess" template="subprocess" icon="images/rounded.gif"/>
 	<add as="Ellipse" template="shape" style="ellipse" icon="images/ellipse.gif"/>
 	<add as="Rhombus" template="shape" style="rhombus" icon="images/rhombus.gif"/>
